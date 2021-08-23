@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banana Speak</title>
+
+</head>
+<body>
+    <button id="btn">translate</button>
+    <textarea id="text-input" placeholder="enter here">
+        
+    </textarea>
+ 
+
+
+    <script src="javascript.js"></script>
+</body>
+</html>
+<!--    <style>
+          #container, #output {
+            height: 300px;
+            width: 300px;
+            border: 2px solid grey ;
+            padding: 5px;
+            margin: 0px; 
+            display: block;
+        }
+        
+         
+
+    </style>
+  
+
+    <h1>Banana talks </h1>
+    <textarea id="container" placeholder="Enter here" >
+
+    </textarea>
+    <button id="CLICKME" >
+        Translate
+    </button>
+    <div class="head">output is below</div>
+    <div id="output">
+
+    </div>
+    <script>
+        // console.log("hey it's working")
+        // let name =prompt("your name plz ");
+        // alert("its working good job "+ name );
+        var btntranslate =document.querySelector("#CLICKME");
+        var txtarea= document.querySelector("#container");
+        var outputtxt=document.querySelector("#output")
+        // outputtxt.innerText="hello moto"
+        var serverUrl="https://api.funtranslations.com/translate/ferb-latin.json"
+        function getTranslationUrl(text) {
+            return  serverUrl + "?" + text
+            
+        }
+        function clickEvent() {
+            // outputtxt.innerText="ajsjsjsjsjsjsjs" + txtarea.value;
+            
+        var inputtxt=txtarea.value;
+      
+         fetch(getTranslationUrl(inputtxt))
+         .then(response => response.json())
+         .then(json=> console.log(json))   
+             var translatedText = json.contents.translated;
+             outputtxt.innerText=translatedText;
+        };   btntranslate.addEventListener("click"  ,  clickEvent ) // click is predefined ,  ex. scroll
+    </script> -->
